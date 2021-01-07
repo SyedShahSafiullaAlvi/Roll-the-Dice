@@ -10,11 +10,12 @@ print('''
  
 ''')
 
-def roll():
+def roll():          # writing a function for dice rolling
     while 1:
-        import random
-        num=random.randint(1,7)
-        if num==1:
+        import random       # importing random module to randomise the outcoming number
+        num=random.randint(1,7)         # num variable be assigned any number among 1,2,3,4,5 and 6
+        
+        if num==1:              # printing the number we got on rolling the dice
             print('''
                  -----
                 |  1  |
@@ -49,7 +50,7 @@ def roll():
                  -----
                 ''')
             break
-        elif num==6:
+        elif num==6:                # if got 6, dice is automatically rolled again
             print('''
                  -----
                 |  6  |
@@ -58,14 +59,14 @@ def roll():
             continue
 
 print("Hey, Lets roll the dice.")
-roll()
+roll()              # calling the dice rolling function
 while 1:
-    roll_again= input("Wanna roll again? Type 'S' or else Type 'N':  ").upper()
-    if roll_again=='S':
+    roll_again= input("Wanna roll again? Type 'S' or else Type 'N':  ").upper()     # asking user 
+    if roll_again=='S':             # If yes, dice is rolled again
         roll()
         continue
-    elif roll_again=='N':
+    elif roll_again=='N':           # if no program is terminated
         break
     else:
-        print("Invalid choice!!")
+        print("Invalid choice!!")      # if user by mistakely enters anything else except 'S' and 'No', It asks user to enter choice once again
         continue
